@@ -1,25 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h> 
-
-int main()
-{
+int main(){
    int T,n;
    scanf("%d",&T);
-   int i,j;
-   int* tab = (int*)malloc(sizeof(int)*T);
-   for(i = 0 ;i < T; i++){
+   while(T--){
       long long a;
       double count = 0;
       scanf("%d",&n);
-      for(j = 0; j < n ; j++){
+      while(n--){
          scanf("%lld", &a);
          count += log10(a);
       }
-      tab[i] = ceil(count);
-   }
-   for(i = 0; i < T; i++){
-      printf("%d\n",tab[i]);
+      printf("%0.f\n",ceil(count));
    }
    return 0;
 }
